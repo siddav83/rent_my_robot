@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1><%= @appointments.robot.name %>Appointments</h1>
+      <ol>      
+        <% @appointments.each do |app| %>
+          <li><%= app.robot %> | <%= app.datetime %></li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
