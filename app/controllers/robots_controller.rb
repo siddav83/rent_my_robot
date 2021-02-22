@@ -1,21 +1,7 @@
-class RobotController < ApplicationController
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class RobotsController < ApplicationController
+  def index
+    @robot = Robot.all
+  end
 
   def new
     @robot = Robot.new
@@ -25,6 +11,4 @@ class RobotController < ApplicationController
     @robot = Robot.create(strong_params)
     redirect_to = robot_path(@robot)
   end
-
-
 end
