@@ -112,6 +112,7 @@ GEM
     method_source (1.0.0)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
+    mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
     nio4r (2.5.5)
@@ -262,3 +263,4 @@ RUBY VERSION
 
 BUNDLED WITH
    2.2.11
+
