@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   def index
-    @appointments = Appointments.where(user.id == user_id)
+    @appointments = Appointment.where(robot_id: params[:robot_id].to_i)
   end
 
   def new
