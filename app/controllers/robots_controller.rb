@@ -1,6 +1,10 @@
 class RobotsController < ApplicationController
   def index
-    @robot = Robot.all
+    @robots = Robot.all
+  end
+
+  def show
+    @robot = Robot.find(params[:id])
   end
 
   def new
