@@ -1,5 +1,5 @@
 class RobotsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :get_robot, only: [ :show, :edit, :update, :destroy]
 
   def index
