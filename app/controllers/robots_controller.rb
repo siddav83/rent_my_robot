@@ -2,7 +2,11 @@ class RobotsController < ApplicationController
   before_action :get_robot, only: [ :edit, :update, :destroy]
 
   def index
-    @robot = Robot.all
+    @robots = Robot.all
+  end
+
+  def show
+    @robot = Robot.find(params[:id])
   end
 
   def new
