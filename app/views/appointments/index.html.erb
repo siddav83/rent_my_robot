@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1><%= @appointments.robot.name %>Appointments</h1>
+      <p>Robot ID | Robot Name | Appointment Time</p>
+      <P>Appointments: <%= @appointments.count %></P>
       <ol>      
         <% @appointments.each do |app| %>
-          <li><%= app.robot %> | <%= app.datetime %></li>
+          <li>Robot no.<%= app.robot_id %> | <%= app.robot.name %> | <%= app.sessions_datetime %></li>
         <% end %>
       </ol>
     </div>
