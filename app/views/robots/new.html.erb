@@ -1,6 +1,11 @@
-<%= simple_form_for(@robot) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "create a robot", class: 'btn btn-primary' %>
-<% end %>
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for(@robot) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "create a robot", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
