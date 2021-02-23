@@ -1,1 +1,7 @@
-HOWDY :D
+<div class="container">
+  <%= simple_form_for [ @new, @robot, @appointment ] do |f| %>
+    <%= f.input :sessions_duration %>
+    <%= f.input :sessions_datetime %>
+    <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+  <% end %>
+</div>
