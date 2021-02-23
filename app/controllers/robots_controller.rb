@@ -35,11 +35,11 @@ class RobotsController < ApplicationController
 
   private
 
-  def get_robot 
+  def get_robot
     @robot = Robot.find(params[:id])
   end
 
   def strong_params
-    params.require(:robot).permit(:name)
+    params.require(:robot).permit(:name, :photo)
   end
 end
