@@ -1,1 +1,11 @@
-HOWDY :D
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for [ @new, @robot, @appointment ] do |f| %>
+        <%= f.input :sessions_duration %>
+        <%= f.input :sessions_datetime %>
+        <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
