@@ -13,7 +13,7 @@ class RobotsController < ApplicationController
   end
 
   def create
-    @robot = Robot.new(strong_params)
+    @robot = Robot.new(strong_params) # robot.user = current_user // hidden field?
     if @robot.save
       redirect_to robot_path(@robot), notice: "Robot successfully created"
     else
