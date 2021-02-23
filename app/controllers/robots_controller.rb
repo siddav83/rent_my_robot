@@ -15,7 +15,8 @@ class RobotsController < ApplicationController
 
   def create
     @robot = Robot.create(strong_params)
-    redirect_to robot_path(@robot)
+  #redirect_to robot_path(@robot)
+    redirect_to robots_path
   end
 
   def edit; end
