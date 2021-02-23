@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :robots do
-    resources :appointments, only: [ :new, :create ]
+    resources :appointments, only: [ :index, :show, :new, :create ]
+  end
+  # resources :appointments, only: [ :index, :show ]
   devise_for :users
   root to: 'pages#home'
   resources :users
