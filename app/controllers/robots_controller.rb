@@ -10,7 +10,6 @@ class RobotsController < ApplicationController
 
   def new
     @robot = Robot.new
-    raise
   end
 
   def create
@@ -44,6 +43,6 @@ class RobotsController < ApplicationController
   end
 
   def strong_params
-    params.require(:robot).permit(:name, :photo)
+    params.require(:robot).permit(:name, photos: [])
   end
 end
