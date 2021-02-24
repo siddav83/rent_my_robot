@@ -5,10 +5,10 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.where(robot_id: params[:robot_id].to_i)
   end
 
-  def new
-    @robot = Robot.find(params[:robot_id])
-    @appointment = Appointment.new
-  end
+  # def new
+  #   @robot = Robot.find(params[:robot_id])
+  #   @appointment = Appointment.new
+  # end
 
   def create
     # refactored to accomodate nesting of form and redirecting.
@@ -33,7 +33,7 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:sessions_duration, :sessions_datetime)
+    params.require(:appointment).permit(:user_id, :robot_id, :sessions_duration, :sessions_datetime)
   end
 
   def set_appointments
