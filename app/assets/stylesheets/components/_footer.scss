@@ -9,22 +9,25 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #f9f6f7;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #1a508b;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
+  color: #b2deec;
 }
-.footer .fa-heart {
-  color: #D23333;
+.footer .fa-robot {
+  color: #1a508b;
 }
-
+.footer-copyright {
+  color: grey;
+}

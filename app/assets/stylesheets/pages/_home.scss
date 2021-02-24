@@ -11,6 +11,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 .banner p {
@@ -18,15 +19,23 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: sans-serif;
 }
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #1a508b;
   transition: background 0.3s ease;
+  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.2);
+
 }
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #B3DEEC;
   color: white;
+  transition: background 0.3s ease;
+}
+
+.action {
+  padding: 150px;
 }
