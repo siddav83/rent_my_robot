@@ -1,0 +1,7 @@
+
+      <%= simple_form_for [ robot, appointment ] do |f| %>
+        <%= f.input :sessions_duration %>
+        <%= f.input :sessions_datetime %>
+        <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+      <% end %>
+

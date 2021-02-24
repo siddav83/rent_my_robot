@@ -1,3 +1,4 @@
 <h1>hellp test</h1>
 <%= @robot.name %>
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<%=  cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
