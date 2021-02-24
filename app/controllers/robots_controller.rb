@@ -1,5 +1,5 @@
 class RobotsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :get_robot, only: [ :show, :edit, :update, :destroy]
 
   def index
@@ -10,11 +10,11 @@ class RobotsController < ApplicationController
 
   def new
     @robot = Robot.new
-    raise
   end
 
   def create
-    @robot = Robot.new(strong_params) # robot.user = current_user // hidden field?
+    @robot = Robot.new(strong_params)
+    @robot.user_id = 1  #robot.user = current_user // hidden field?
     if @robot.save
       redirect_to robot_path(@robot), notice: "Robot successfully created"
     else
@@ -44,6 +44,6 @@ class RobotsController < ApplicationController
   end
 
   def strong_params
-    params.require(:robot).permit(:name, :photo)
+    params.require(:robot).permit(:name, photos: [])
   end
 end

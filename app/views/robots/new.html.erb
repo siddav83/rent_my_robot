@@ -3,9 +3,10 @@
     <div class="col-6">
       <%= simple_form_for(@robot) do |f| %>
         <%= f.input :name %>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.submit "create a robot", class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>
 </div>
+<form method='POST' action="/robots"></form>
