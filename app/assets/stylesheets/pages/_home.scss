@@ -1,92 +1,32 @@
 // Specific CSS for your home-page
-.card-category {
+.banner {
   background-size: cover;
   background-position: center;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+}
+
+.banner h1 {
+  margin: 0;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
 }
 
-
-.btn-ghost {
-  color: #4EAAD7;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.btn-ghost:hover {
-  opacity: 1;
-}
-
-.btn-flat {
+.banner p {
   font-size: 20px;
   color: white;
-  padding: 8px 24px;
-  border-radius: 10px;
-  background: #B3BCC4;
-  transition: background 0.3s ease;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
-.btn-flat:hover {
-  background: #4EAAD7;
-  color: white;
-}
-
-.btn-gradient {
+.btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: #1EDD88;
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
 }
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+.btn-flat:hover {
+  background: #1BCB7F;
   color: white;
-}
-
-
-
-
-
-
-
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
 }
