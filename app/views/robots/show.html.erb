@@ -1,3 +1,18 @@
-<h1>hellp test</h1>
-<%= @robot.name %>
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+   <div class="row justify-content-center">
+     <div class="card-body card col-8">
+       <div class="d-flex flex-column align-items-center text-center">
+         <% @robot.photos.each do |photo| %>
+           <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+           <% end %>
+         <div class="mt-3">
+           <h4>Name: <%= @robot.name %></h4>
+           <h6 class="text-secondary mb-1">Function: <%= @robot.function %></h6>
+           <h6 class="text-muted font-size-sm">Rating: <%= @robot.rating %></h6>
+           <button class="btn btn-primary">???</button>
+           <button class="btn btn-outline-primary">???</button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
