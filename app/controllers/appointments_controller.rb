@@ -5,20 +5,20 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.where(robot_id: params[:robot_id].to_i)
   end
 
-  # def new
-  #   @robot = Robot.find(params[:robot_id])
-  #   @appointment = Appointment.new
-  # end
+  def new
+    @robot = Robot.find(params[:robot_id])
+    @appointment = Appointment.new
+  end
 
   def create
-    # refactored to accomodate nesting of form and redirecting.
     @appointment = Appointment.new(appointment_params)
     @robot = Robot.find(params[:robot_id])
     @appointment.robot = @robot
+    @appointment.user = current_user
     if @appointment.save
-      redirect_to robot_path(@robot)
+      redirect_to robot_path(@robot), notice: "Appointment booked."
     else
-      render :new
+      redirect_back(fallback_location: "/", notice: "Some parameters missing!")
     end
   end
 
