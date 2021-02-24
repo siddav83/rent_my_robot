@@ -1,7 +1,17 @@
 
-<h1>hellp test</h1>
-<%= @robot.name %>
-<% if @robot.photos.exists? %>
-  <%= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-<%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
+<h1><%= @robot.name %></h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">    
+      <img src="https://media.vanityfair.com/photos/54f86fecebd1a8c7648a0635/master/w_2560%2Cc_limit/chappie-review-richard-lawson-robot.jpg" alt="chappie" style="width: 100%;">
+      <ul>
+        
+        <% @robot.appointments.each do |app| %>
+          <li>At <%= app.sessions_datetime %> for <%= app.sessions_duration %> hours</li>
+        <% end %>
+        
+      </ul>
+      <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
+    </div>
+  </div>
+</div>

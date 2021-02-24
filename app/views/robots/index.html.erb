@@ -12,8 +12,9 @@
           <ul>
             <li>
               <p>
-                Name: <%=robot.name  %>
-                Name: <%=robot.name  %>
+                <%= link_to(robot_path(robot)) do %>
+                  Name: <%= robot.name  %>
+                <% end %>
               </p>
             </li>
             <li>
