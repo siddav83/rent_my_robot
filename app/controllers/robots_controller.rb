@@ -14,12 +14,13 @@ class RobotsController < ApplicationController
 
   def create
     @robot = Robot.new(strong_params)
-    @robot.user_id = 1  #robot.user = current_user // hidden field?
-    if @robot.save
-      redirect_to robot_path(@robot), notice: "Robot successfully created"
-    else
-      render :new
-    end
+    @robot.user_id = current_user.id
+    # if @robot.save
+    #   redirect_to robot_path(@robot), notice: "Robot successfully created"
+    # else
+    #   render :new
+    # end
+    @robot.save ? redirect_to(robot_path(@robot), notice: "Robot created") : render(:new)
   end
 
   def edit; end
