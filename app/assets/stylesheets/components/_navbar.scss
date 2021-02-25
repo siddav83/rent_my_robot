@@ -2,6 +2,9 @@
   justify-content: space-between;
   background: white;
   padding: 10px;
+  padding-left: 25px;
+  padding-right: 30px;
+  background-color: #f9f6f7;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,15 +15,43 @@
   width: 40px;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
+i.fab.fa-jenkins.logo {
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  padding: 15px;
+  border: solid;
+  border-color: white;
+}
+.navbar-nav {
+  border: solid;
+  padding: 3px;
+  border-radius: 4px;
+  border-color: white;
+  opacity: 0.7;
+
 }
 
 .btn .btn-sm .btn-outline-secondary {
   font: 800;
 }
 
-.nav-item.dropdown {
-  list-style-type: none;
+.nav-item.active {
+  font-weight: bold;
+}
+.login {
+  margin-right: 20px;
+}
+
+.nav-link {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  margin: 3px;
+  box-shadow: 1px 1px 25px 1px #999;
 }
