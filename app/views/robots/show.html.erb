@@ -4,8 +4,11 @@
     <div class="card-holder">
       <h1>hellp test</h1>
       <%= @robot.name %>
+      <% if @robot.photos.key.exits? %>
       <%= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
-      <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %> 
+      <% end %>
+      <%= image_tag "picture", alt: "alttext" %>
+      <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
     </div>
 </div>
 
