@@ -10,6 +10,7 @@ class RobotsController < ApplicationController
 
   def new
     @robot = Robot.new
+    @function = ["Cleaning", "Teaching", "Cooking", "Bestie"]
   end
 
   def create
@@ -45,6 +46,6 @@ class RobotsController < ApplicationController
   end
 
   def strong_params
-    params.require(:robot).permit(:name, photos: [])
+    params.require(:robot).permit(:name,:function, :description, photos: [])
   end
 end
