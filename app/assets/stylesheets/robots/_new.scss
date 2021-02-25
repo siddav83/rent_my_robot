@@ -5,8 +5,8 @@ h2 {
   color: #3188C0;
 }
 
-.container {
-  background-color: #B3BCC4;
+.content {
+  background-color: rgba(179, 188, 196, 0.5);
   border-radius: 10px;
   opacity: 0,2px;
   text-align: center;
@@ -16,6 +16,7 @@ h2 {
 
 
 .btn-primary {
+  align: center;
   background-color: #3188C0 !important;
   border-color: #3188C0 !important;
 }
@@ -24,3 +25,14 @@ h2 {
   color: #3188C0;
 
 }
+
+.newcontainer {
+  opacity: 0,2px;
+  width: 70%;
+  padding: 8px;
+  align: center;
+  border-radius: 5px;
+  margin: -40px auto 2px;
+  background-color: rgba(179, 188, 196, 0.5);
+}
+

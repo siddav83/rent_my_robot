@@ -1,0 +1,17 @@
+
+        <div class="row justify-content-center">
+          <div class="col-6">
+
+           <%= simple_form_for(robot) do |f| %>
+          <div class="content" >
+          <%= f.input :name, label_html: {class: "formlabel"} %>
+          <%= f.input :function, collection: @function, label_html: {class: "formlabel"} %>
+          <%= f.input :description, label_html: {class: "formlabel"} %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true }, label_html: {class: "formlabel"} %>
+          </div>
+          <%= f.submit "create a robot", class: 'btn btn-primary' %>
+          <% end %>
+         </div>
+       </div>
+     <form method='POST' action="/robots"></form>
+
