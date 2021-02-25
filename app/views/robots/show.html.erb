@@ -6,7 +6,7 @@
     <h1>hellp test</h1>
     <%= @robot.name %>
     <% if @robot.photos.exists? %>
-    <%= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
     <% end %>
     <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
     </div>
