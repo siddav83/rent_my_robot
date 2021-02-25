@@ -10,17 +10,19 @@ class RobotsController < ApplicationController
 
   def new
     @robot = Robot.new
+    @function = ["Cleaning", "Teaching", "Cooking", "Bestie"]
   end
 
   def create
     @robot = Robot.new(strong_params)
+    # raise
     @robot.user_id = current_user.id
-    # if @robot.save
-    #   redirect_to robot_path(@robot), notice: "Robot successfully created"
-    # else
-    #   render :new
-    # end
-    @robot.save ? redirect_to(robot_path(@robot), notice: "Robot created") : render(:new)
+    if @robot.save
+      redirect_to robot_path(@robot), notice: "Robot successfully created"
+    else
+      render :new
+    end
+    # @robot.save ? redirect_to(robot_path(@robot), notice: "Robot created") : render(:new)
   end
 
   def edit; end
@@ -35,7 +37,7 @@ class RobotsController < ApplicationController
 
   def destroy
     @robot.destroy
-    redirect_to robots_path, notice: "Robot: #{@robot.name} was deleted"
+    redirect_to robots_path, notice: "Robot was deleted"
   end
 
   private
@@ -45,6 +47,6 @@ class RobotsController < ApplicationController
   end
 
   def strong_params
-    params.require(:robot).permit(:name, photos: [])
+    params.require(:robot).permit(:name,:function, :description, photos: [])
   end
 end
