@@ -1,38 +1,37 @@
-<head>
-</head>
-
-<body>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <h2>List of snazzy wazzy cleaning robots</h2>
-      <% @robots.each do |robot| %>
-        <div class="card">
-          <ul>
-            <li>
-              <p>
-                Name: <%=robot.name  %>
-                Name: <%=robot.name  %>
-              </p>
-            </li>
-            <li>
-              <p>
-                Function: <%=robot.function %>
-              </p>
-            </li>
-            <p>
+<div class="holder">
+  <div class="robo-background">
+  </div>
+  <div class="card-holder">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h2>List of snazzy wazzy cleaning robots</h2>
+          <% @robots.each do |robot| %>
+          <div class="card">
+            <ul>
               <li>
-              Rating: <%=robot.rating %>
-              </p>
-            </li>
-          </ul>
+                <p>
+                  Name: <%=robot.name  %>
+                  Name: <%=robot.name  %>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Function: <%=robot.function %>
+                </p>
+              </li>
+              <p>
+                <li>
+                  Rating: <%=robot.rating %>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <%end %>
         </div>
-      <%end %>
+      </div>
+      <%= link_to 'Back', :root %>
     </div>
   </div>
-  <%= link_to 'Back', :root %> |
 </div>
-
-</body>
 
