@@ -1,9 +1,56 @@
 .card {
-  background-color: black;
+  box-shadow: 5px 5px 5px 4px rgba(0,0,0,0.06);
+  margin: 10px;
+  border: 1px solid #CCCCCC;
+
+}
+
+h3 {
+  font-family: copperplate;
+  text-shadow: 1px 1px rgba(0,0,0,0.06);
+}
+h2 {
+  font-family: arial;
+  color: white;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-info p {
+  font-weight: 300;
+  font-family: arial;
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-details p {
+  font-weight: 300;
+  font-family: arial;
 }
 
 img {
   height: 300px;
   width: 100%;
   object-fit: cover;
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  padding: 8px 24px;
+  font-weight: bolder;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: black;
+  background-color: #f9f6f7;
+  transition: 0.5s ease;
 }

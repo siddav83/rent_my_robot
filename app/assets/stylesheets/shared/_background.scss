@@ -1,6 +1,6 @@
 .holder {
   min-height: 100vh;
-  background-color: #F4F4F4;
+  background-color: #f9f6f7;
 }
 
 .robo-background {
@@ -8,9 +8,8 @@
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dek4vhpvr/image/upload/v1614250226/venture-capitalist-supercomputer_rvbmtv.jpg')
 }
 .card-holder {
-
   margin: -100px auto 10px;
   width: 80%;
-  background-color: grey;
-  border: 2px black solid;
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 15px 15px rgba(0,0,0,0.1);
 }
