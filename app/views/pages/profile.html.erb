@@ -1,1 +1,60 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="col-6 profile-image">
+        <% if @user.photos.present? %>
+        <%= cl_image_tag @user.photos.key, height: 150, width: 150, crop: :fill %>
+        <% else %>
+          <% img_source = "https://robohash.org/#{rand(1..99)}" %>
+          <%= image_tag(img_source, :alt => "robot alter-ego") %>
+          <%= link_to "Add and pic of you", edit_user_registration_path %>
+        <% end %>
+      </div>
+      
+      <% if @user.username.present? %>
+        <h1><%= @user.username %></h1>
+      <% else %>
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <% end %>
 
+      <h4>Name</h4>
+      <p><%= link_to "Edit name", edit_user_registration_path %></p>
+      <div class="full-name col-6">
+        <% if @user.first_name.present?  %>
+          <p><%= @user.first_name %></p>
+        <% else %>
+          <p><%= link_to "Add first name", edit_user_registration_path %></p>
+        <% end %>
+        <% if @user.last_name.present?  %>
+          <p><%= @user.last_name %></p>
+        <% else %>
+          <p><%= link_to "Add last name", edit_user_registration_path %></p>
+        <% end %>
+      </div>
+
+      <h3>Robots</h3>
+      <% if @user.robots.length == 0 %>
+        <p>No robots currently added - <%= link_to "add one now.", new_robot_path %></p>
+      <% else %>
+        <p><%= link_to "Add another robot", new_robot_path %></p>
+        <ul>        
+          <% @user.robots.each do |robot| %>
+            <li><%= robot.name %></li>
+          <% end %>        
+        </ul>
+      <% end %>
+
+      <h3>Appointments</h3>
+      <% if @user.appointments.length == 0 %>
+        <p>No appointments currently booked - <%= link_to "book one now.", robots_path %></p>
+      <% else %>
+        <p><%= link_to "Add another appointment", robots_path %></p>
+        <ul>        
+          <% @user.appointments.each do |app| %>
+            <li><%= app.robot %> booked for <%= app.sessions_durations %> at <%= app.sessions_datetime %></li>
+          <% end %>        
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
