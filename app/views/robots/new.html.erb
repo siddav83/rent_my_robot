@@ -4,6 +4,7 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <%= simple_form_for(@robot) do |f| %>
+
         <%= f.input :name, label_html: {class: "formlabel"} %>
         <%= f.input :function, collection: @function, label_html: {class: "formlabel"} %>
         <%= f.input :description, label_html: {class: "formlabel"} %>
@@ -14,4 +15,3 @@
   </div>
 </div>
 <form method='POST' action="/robots"></form>
-

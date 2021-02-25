@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_114114) do
     t.integer "sessions_duration"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.bigint "robot_id"
+    t.bigint "robot_id", null: false
+    t.bigint "user_id", null: false
     t.index ["robot_id"], name: "index_appointments_on_robot_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
@@ -77,4 +77,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_114114) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "appointments", "robots"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "robots", "users"
 end
