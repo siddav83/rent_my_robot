@@ -16,42 +16,73 @@
 }
 
 i.fab.fa-jenkins.logo {
-  font-size: 50px;
-  color: white;
-  background-color: black;
+  font-size: 45px;
+  color: #1a508b;
   border-radius: 50%;
   padding: 15px;
-  border: solid;
-  border-color: white;
-}
-.navbar-nav {
-  border: solid;
-  padding: 3px;
-  border-radius: 4px;
-  border-color: white;
-  opacity: 0.7;
-
 }
 
-.btn .btn-sm .btn-outline-secondary {
-  font: 800;
+#login-dp{
+    min-width: 290px;
+    padding: 14px 14px;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0
+}
+#login-dp .social-buttons a{
+    width: 49%;
+    vertical-align: center;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+    text-align: center;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+.navbar-text {
+  padding: 0;
+  margin-right: 5px;
+}
+.dropdown {
+  margin-right: 15px;
 }
 
-.nav-item.active {
-  font-weight: bold;
-}
-.login {
-  margin-right: 20px;
-}
-
-.nav-link {
-  padding: 8px;
-  font-size: 12px;
-}
-
-.avatar {
-  width: 60px;
-  height: 60px;
-  margin: 3px;
-  box-shadow: 1px 1px 25px 1px #999;
+a {
+  text-decoration: none;
+  color: #1a508b;
 }
