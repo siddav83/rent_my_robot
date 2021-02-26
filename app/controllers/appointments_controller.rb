@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
     @appointment.robot = @robot
     @appointment.user = current_user
     if @appointment.save
-      redirect_to robot_path(@robot), notice: "Appointment booked."
+      redirect_to profile_path, notice: "Appointment booked."
     else
       redirect_back(fallback_location: "/", notice: "Some parameters missing!")
     end
