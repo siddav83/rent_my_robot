@@ -19,8 +19,9 @@
           <div class="card-details">
             <p>Function: <%=robot.function %></p>
           </div>
+
           <div class="pay-btn">
-            <a class="btn btn-ghost" href="#">BOOK</a>
+            <%= link_to "BOOK", robot_path(robot), class: "btn btn-ghost"%>
           </div>
         </div>
       <% end %>
