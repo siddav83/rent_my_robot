@@ -77,7 +77,11 @@
             <% @user.robots.each do |robot| %>
               <div class="card spacing">
                 <div>
-                  <%= image_tag "bot", alt: "robot pic" %>
+                  <% if robot.photo.attached? %>
+                    <%= image_tag(cl_image_path(robot.photo.key), :alt => "avatar", class: "profile-avatar-image") %>
+                  <% else %>
+                    <%= image_tag "https://scx2.b-cdn.net/gfx/news/hires/2019/3-robot.jpg", alt: "robot pic" %>
+                  <% end %>
                 </div>
                 <div class="card-info">
                   <h3><%=robot.name%></h3>
