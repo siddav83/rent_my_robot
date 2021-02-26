@@ -6,9 +6,9 @@
       <div class="d-flex justify-content-between">
         <div class="col-4">
           <div class="profile-image">            
-              <% if @user.photos.present? %>
+              <% if @user.photo.attached? %>
                 <div class="profile-avatar">
-                  <%= image_tag(cl_image_path(@user.photos.key), :alt => "avatar", class: "profile-avatar-image") %>
+                  <%= image_tag(cl_image_path(@user.photo.key), :alt => "avatar", class: "profile-avatar-image") %>
                 </div>
               <% else %>
                 <div class="profile-avatar">
@@ -20,7 +20,7 @@
           </div>
           
           <div class="container">
-            <% if @user.username.present? %>
+            <% if @user.username.attached? %>
               <h1><%= @user.username %></h1>
             <% else %>
               <h1><%= @user.first_name %> <%= @user.last_name %></h1>
@@ -29,12 +29,12 @@
 
           <h2 class="profile-titles justify-content-left">Name</h2>
           <div class="full-name">
-            <% if @user.first_name.present?  %>
+            <% if @user.first_name.attached?  %>
               <p><%= @user.first_name %></p>
             <% else %>
               <p>No name added</p>
             <% end %>
-            <% if @user.last_name.present?  %>
+            <% if @user.last_name.attached?  %>
               <p><%= @user.last_name %></p>
             <% else %>
               <p>No name added</p>

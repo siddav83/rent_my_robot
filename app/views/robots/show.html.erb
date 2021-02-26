@@ -5,22 +5,22 @@
     <div class="p-3 position-absolute h-100">
       <div class="flex-container">
         <div class="image-container">
-          <%= image_tag "terminator", :class => "style_image" %>
-      <!-- < if @robot.photos.key.exits? %>
-      <= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
-      < end %> -->
-    </div>
-    <div class="robot-details">
-      <h4 class="robo-title"> <%= @robot.name %></h4>
-      <h5 class="robo-subtitle"><%= @robot.function %></h5>
-      <h5>Rating: <%= @robot.rating %></h5>
-      <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. <%= @robot.description %></p>
-      <div class="booking-form">
-        <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
+          <% if @robot.photo.attached? %>
+            <%= cl_image_tag @robot.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <%= image_tag "terminator", :class => "style_image" %>
+          <% end %>
+        </div>
+        <div class="robot-details">
+          <h4 class="robo-title"> <%= @robot.name %></h4>
+          <h5 class="robo-subtitle"><%= @robot.function %></h5>
+          <h5>Rating: <%= @robot.rating %></h5>
+          <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. <%= @robot.description %></p>
+          <div class="booking-form">
+            <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-</div>
-

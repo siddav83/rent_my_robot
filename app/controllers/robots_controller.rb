@@ -1,6 +1,6 @@
 class RobotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
-  before_action :get_robot, only: [ :show, :edit, :update, :destroy]
+  before_action :get_robot, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @robots = Robot.all
@@ -49,6 +49,6 @@ class RobotsController < ApplicationController
   end
 
   def strong_params
-    params.require(:robot).permit(:name,:function, :description, photos: [])
+    params.require(:robot).permit(:name, :function, :description, :photo)
   end
 end

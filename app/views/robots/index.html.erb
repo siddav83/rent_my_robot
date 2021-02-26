@@ -10,7 +10,11 @@
       <% @robots.each do |robot| %>
         <div class="card-index">
           <div>
-            <%= image_tag "bot", alt: "robot pic" %>
+            <% if robot.photo.attached? %>
+              <%= image_tag(cl_image_path(robot.photo.key), alt: "robot photo") %>
+            <% else %>
+              <%= image_tag "bot", alt: "robot pic" %>
+            <% end %>
           </div>
           <div class="card-info">
             <h3><%=robot.name%></h3>
