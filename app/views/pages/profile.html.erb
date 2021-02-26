@@ -8,7 +8,6 @@
           <div class="profile-image">            
               <% if @user.photos.present? %>
                 <div class="profile-avatar">
-                  <%# <%= cl_image_tag @user.photos.key, height: 150, width: 150, crop: :fill %> %>
                   <%= image_tag(cl_image_path(@user.photos.key), :alt => "avatar", class: "profile-avatar-image") %>
                 </div>
               <% else %>
@@ -20,23 +19,25 @@
               <% end %>            
           </div>
           
-          <% if @user.username.present? %>
-            <h1><%= @user.username %></h1>
-          <% else %>
-            <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-          <% end %>
+          <div class="container">
+            <% if @user.username.present? %>
+              <h1><%= @user.username %></h1>
+            <% else %>
+              <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+            <% end %>
+          </div>
 
-          <h2>Name</h2>
+          <h2 class="profile-titles justify-content-left">Name</h2>
           <div class="full-name">
             <% if @user.first_name.present?  %>
               <p><%= @user.first_name %></p>
             <% else %>
-              <p><%= link_to "Add first name", edit_user_registration_path %></p>
+              <p>No name added</p>
             <% end %>
             <% if @user.last_name.present?  %>
               <p><%= @user.last_name %></p>
             <% else %>
-              <p><%= link_to "Add last name", edit_user_registration_path %></p>
+              <p>No name added</p>
             <% end %>
           </div>
           <p><%= link_to "Edit my profile", edit_user_registration_path %></p>
@@ -86,7 +87,9 @@
                 <p>Function: <%=robot.function %></p>
                 </div>
                 <div class="pay-btn">
-                <a class="btn btn-ghost" href="#">BOOK</a>
+                <%= link_to(edit_robot_path(robot.id)) do %>
+                  <p class="btn btn-ghost">EDIT</a>
+                <% end %>
                 </div>
               </div>
             <% end %>
