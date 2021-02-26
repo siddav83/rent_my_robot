@@ -25,7 +25,9 @@ class RobotsController < ApplicationController
     # @robot.save ? redirect_to(robot_path(@robot), notice: "Robot created") : render(:new)
   end
 
-  def edit; end
+  def edit
+    @function = ["Cleaning", "Teaching", "Cooking", "Bestie"]
+  end
 
   def update
     if @robot.update(strong_params)
