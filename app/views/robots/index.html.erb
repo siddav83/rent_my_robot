@@ -2,20 +2,21 @@
   <div class="robo-background">
   </div>
   <div class="card-holder">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <h2>List of snazzy wazzy cleaning robots</h2>
-          <% @robots.each do |robot| %>
-          <div class="card">
-            <div>
-              <%= image_tag "bot", alt: "robot pic" %>
-            </div>
-            <div class="card-info">
-              <h3><%=robot.name%></h3>
-              <p>Rating: <%=robot.rating %></p>
-            </div>
-            <div class="card-details">
+    <div class="d-flex justify-content-between">
+      <i class="fas fa-sliders-h slider"> Filter & Sort</i>
+      <h4><em>Choose from hundreds of AI service Androids</em></h4>
+    </div>
+    <div class="cards">
+      <% @robots.each do |robot| %>
+        <div class="card">
+          <div>
+            <%= image_tag "bot", alt: "robot pic" %>
+          </div>
+          <div class="card-info">
+            <h3><%=robot.name%></h3>
+            <p>Rating: <%=robot.rating %></p>
+          </div>
+          <div class="card-details">
             <p>Function: <%=robot.function %></p>
             </div>
             <div class="pay-btn">
@@ -24,11 +25,11 @@
             <% end %>
             </div>
           </div>
-          <% end %>
         </div>
-      </div>
-      <%= link_to 'Back', :root %>
+      <% end %>
     </div>
+
+    <%= link_to 'Back', :root %>
   </div>
 </div>
 
