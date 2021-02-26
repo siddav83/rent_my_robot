@@ -8,26 +8,21 @@
           <h2>List of snazzy wazzy cleaning robots</h2>
           <% @robots.each do |robot| %>
           <div class="card">
-            <ul>
-              <li>
-                <p>
-                  Name: <%=robot.name  %>
-                  Name: <%=robot.name  %>
-                </p>
-              </li>
-              <li>
-                <p>
-                  Function: <%=robot.function %>
-                </p>
-              </li>
-              <p>
-                <li>
-                  Rating: <%=robot.rating %>
-                </p>
-              </li>
-            </ul>
+            <div>
+              <%= image_tag "bot", alt: "robot pic" %>
+            </div>
+            <div class="card-info">
+              <h3><%=robot.name%></h3>
+              <p>Rating: <%=robot.rating %></p>
+            </div>
+            <div class="card-details">
+            <p>Function: <%=robot.function %></p>
+            </div>
+            <div class="pay-btn">
+            <a class="btn btn-ghost" href="#">BOOK</a>
+            </div>
           </div>
-          <%end %>
+          <% end %>
         </div>
       </div>
       <%= link_to 'Back', :root %>

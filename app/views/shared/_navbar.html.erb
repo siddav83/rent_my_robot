@@ -10,16 +10,22 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><p class="navbar-text">Already have an account?</p></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b><span class="caret"></span></a>
-          <ul id="login-dp" class="dropdown-menu dropdown-menu-right">
-            <li>
-              <div class="row">
-                  <div class="col-md-12">
-                    <p>Login via</p>
-                    <div class="social-buttons">
-                      <a href="#" class="btn btn-fb">Facebook</a>
-                      <a href="#" class="btn btn-tw">Twitter</a>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+      <ul id="login-dp" class="dropdown-menu dropdown-menu-right">
+        <li>
+           <div class="row">
+              <div class="col-md-12">
+                Login via
+                <div class="social-buttons">
+                  <a href="#" class="btn btn-fb">Facebook</a>
+                  <a href="#" class="btn btn-tw">Twitter</a>
+                </div>
+                                <p>or</p>
+                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
                     </div>
                     <p>or</p>
                     <form class="form" role="form" method="post" action="users/sign_in" accept-charset="UTF-8" id="login-nav">
@@ -49,6 +55,8 @@
             </li>
           </ul>
       </ul>
-    </div>
-  </div>  
+    </li>
+  </ul>
+</div>
+</div>
 </div>
