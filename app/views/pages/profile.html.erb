@@ -3,9 +3,9 @@
   </div>
   <div class="card-holder">
     <div class="container">
-      <div class="d-flex justify-content-between">
-        <div class="col-4">
-          <div class="profile-image">            
+      <!-- <div class="d-flex justify-content-between"> -->
+        <div class="update">
+          <div class="profile-image">
               <% if @user.photos.present? %>
                 <div class="profile-avatar">
                   <%= image_tag(cl_image_path(@user.photos.key), :alt => "avatar", class: "profile-avatar-image") %>
@@ -15,29 +15,23 @@
                   <% img_source = "https://robohash.org/#{rand(1..99)}" %>
                   <%= image_tag(img_source, :alt => "robot alter-ego", class: "profile-avatar-image") %>
                 </div>
-                <%= link_to "Add a pic of you", edit_user_registration_path %>
-              <% end %>            
-          </div>
-          
-          <div class="container">
-            <% if @user.username.present? %>
-              <h1><%= @user.username %></h1>
-            <% else %>
-              <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-            <% end %>
+
+              <% end %>
           </div>
 
-          <h2 class="profile-titles justify-content-left">Name</h2>
-          <div class="full-name">
+
+
+          <h2 class="profile-titles"></h2>
+          <div class="profile-name">
             <% if @user.first_name.present?  %>
-              <p><%= @user.first_name %></p>
+              <div> <%= @user.first_name %></div>
             <% else %>
-              <p>No name added</p>
+              <div>No name added</div>
             <% end %>
             <% if @user.last_name.present?  %>
-              <p><%= @user.last_name %></p>
+              <div><%= @user.last_name %></div>
             <% else %>
-              <p>No name added</p>
+              <div>No name added</div>
             <% end %>
           </div>
           <p><%= link_to "Edit my profile", edit_user_registration_path %></p>
@@ -52,11 +46,13 @@
               <p>No appointments currently booked - <%= link_to "book one now.", robots_path %></p>
             </div>
           <% else %>
-            <p><%= link_to "Add another appointment", robots_path %></p>
-            <ul>        
+
+            <ul>
+              <h2> Your Appoitments </h2>
+              <p><%= link_to "Add another appointment", robots_path %></p>
               <% @user.appointments.each do |app| %>
-                <li><%= app.robot %> booked for <%= app.sessions_durations %> at <%= app.sessions_datetime %></li>
-              <% end %>        
+                <li><%= app.robot.name %> booked for <%= app.sessions_duration %> at <%= app.sessions_datetime.strftime("%A %d %B") %></li>
+              <% end %>
             </ul>
           <% end %>
 
@@ -69,13 +65,13 @@
             </div>
           <% else %>
             <div class="profile-titles">
-              <div class="d-flex justify-content-between">
-                <h2>Robots</h2>
-                <p><%= link_to "Add another robot", new_robot_path %></p>
+              <!-- <div class="d-flex justify-content-between"> -->
+                <h2> Robots </h2>
               </div>
-            </div>           
+              <%= link_to "Add another robot", new_robot_path %>
+            <!-- </div> -->
             <% @user.robots.each do |robot| %>
-              <div class="card">
+              <div class="card spacing">
                 <div>
                   <%= image_tag "bot", alt: "robot pic" %>
                 </div>
@@ -96,6 +92,6 @@
           <% end %>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </div>

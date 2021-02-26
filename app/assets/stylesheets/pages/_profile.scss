@@ -6,6 +6,7 @@
 }
 
 .profile-image {
+  align: center;
   padding: 30px 0 0 0;
 }
 
@@ -20,3 +21,35 @@
   margin: 10px;
 }
 
+p {
+  text-align: center;
+}
+
+.col-8 {
+  margin: 0 auto;
+}
+
+
+.profile-titles {
+  text-align: center;
+}
+
+.Robotsbutton {
+  text-align: center;
+}
+
+.update {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile-name {
+  text-align: center;
+  diplay: flex;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.spacing {
+  margin: 0 auto;
+}
