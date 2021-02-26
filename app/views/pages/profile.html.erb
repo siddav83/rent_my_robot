@@ -7,7 +7,7 @@
       <!-- <div class="d-flex justify-content-between"> -->
         <div class="update">
           <div class="profile-image">
-              <% if @user.photos.present? %>
+              <% if @user.photo.attached? %>
 
                 <div class="profile-avatar">
                   <%= image_tag(cl_image_path(@user.photo.key), :alt => "avatar", class: "profile-avatar-image") %>
