@@ -13,7 +13,7 @@
             <% if robot.photo.attached? %>
               <%= image_tag(cl_image_path(robot.photo.key), alt: "robot photo") %>
             <% else %>
-              <%= image_tag "bot", alt: "robot pic" %>
+              <%= image_tag "https://scx2.b-cdn.net/gfx/news/hires/2019/3-robot.jpg", alt: "robot pic" %>
             <% end %>
           </div>
           <div class="card-info">
