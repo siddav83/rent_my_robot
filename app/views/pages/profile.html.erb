@@ -20,7 +20,7 @@
           </div>
           
           <div class="container">
-            <% if @user.username.attached? %>
+            <% if @user.username.present? %>
               <h1><%= @user.username %></h1>
             <% else %>
               <h1><%= @user.first_name %> <%= @user.last_name %></h1>
@@ -29,12 +29,12 @@
 
           <h2 class="profile-titles justify-content-left">Name</h2>
           <div class="full-name">
-            <% if @user.first_name.attached?  %>
+            <% if @user.first_name.present?  %>
               <p><%= @user.first_name %></p>
             <% else %>
               <p>No name added</p>
             <% end %>
-            <% if @user.last_name.attached?  %>
+            <% if @user.last_name.present?  %>
               <p><%= @user.last_name %></p>
             <% else %>
               <p>No name added</p>
@@ -55,7 +55,7 @@
             <p><%= link_to "Add another appointment", robots_path %></p>
             <ul>        
               <% @user.appointments.each do |app| %>
-                <li><%= app.robot %> booked for <%= app.sessions_durations %> at <%= app.sessions_datetime %></li>
+                <li><%= app.robot.name %> booked for <%= app.sessions_duration %> at <%= app.sessions_datetime %></li>
               <% end %>        
             </ul>
           <% end %>
