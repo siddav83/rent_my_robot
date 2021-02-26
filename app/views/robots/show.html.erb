@@ -6,9 +6,9 @@
       <div class="flex-container">
         <div class="image-container">
           <%= image_tag "terminator", :class => "style_image" %>
-      <!-- < if @robot.photos.key.exits? %>
-      <= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
-      < end %> -->
+      <% if @robot.photos.key.exits? %>
+        <%= cl_image_tag @robot.photos.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
     </div>
     <div class="robot-details">
       <h4> <%= @robot.name %></h4>
