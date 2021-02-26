@@ -1,14 +1,14 @@
-<div class="holder">
-  <div class="robo-background">
+<div class="holder-index">
+  <div class="robo-background-index">
   </div>
   <div class="card-holder">
     <div class="d-flex justify-content-between">
       <i class="fas fa-sliders-h slider"> Filter & Sort</i>
       <h4><em>Choose from hundreds of AI service Androids</em></h4>
     </div>
-    <div class="cards">
+    <div class="cards-index">
       <% @robots.each do |robot| %>
-        <div class="card">
+        <div class="card-index">
           <div>
             <%= image_tag "bot", alt: "robot pic" %>
           </div>
@@ -20,13 +20,16 @@
             <p>Function: <%=robot.function %></p>
           </div>
           <div class="pay-btn">
-            <%= link_to "BOOK", robot_path(robot), class: "btn btn-ghost"%>
+            <%= link_to(robot_path(robot.id)) do %>
+              <p class="btn btn-ghost">BOOK</p>
+            <% end %>
           </div>
         </div>
       <% end %>
     </div>
-
-    <%= link_to 'Back', :root %>
   </div>
+
+  <%= link_to 'Back', :root %>
 </div>
+
 
