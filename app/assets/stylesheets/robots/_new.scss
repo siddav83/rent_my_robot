@@ -5,7 +5,6 @@ h2 {
   color: #3188C0;
 }
 
-
 .container-new {
   background-color: #B3BCC4;
   border-radius: 10px;
@@ -14,7 +13,6 @@ h2 {
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 
 }
-
 
 .btn-primary {
   align: center;
@@ -26,7 +24,6 @@ h2 {
   color: #3188C0;
 
 }
-
 .newcontainer {
   opacity: 0,2px;
   width: 70%;
@@ -37,24 +34,25 @@ h2 {
   background-color: rgba(179, 188, 196, 0.5);
 }
 
-.card {
+.card-show {
   border: 1px solid blue;
   width: 70%;
-  margin: -70px auto 16px;
   border-radius: 5px;
   background-color: rgba(179, 188, 196, 0.5);
   min-height: 562px;
-
 }
+
 .flex-container {
   height: 100%;
   width: 100%;
   display: flex;
 }
+
 .image-container {
   padding: 8px;
   width: 50%;
 }
+
 .image-container img {
   width: 100%;
   height: 100%;
@@ -68,17 +66,19 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
 .booking-form {
   height: 100px;
   width: 100%;
 }
 
-h4 {
+.robo-title {
   font-weight: bold;
+  font-size: 32px;
   color: #3188C0;
 }
 
-h5 {
+.robo-subtitle {
   padding-bottom: 5px;
 }
 

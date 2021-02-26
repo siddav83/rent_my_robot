@@ -3,12 +3,14 @@
   </div>
   <div class="card-holder">
     <div class="container">
+
       <!-- <div class="d-flex justify-content-between"> -->
         <div class="update">
           <div class="profile-image">
               <% if @user.photos.present? %>
+
                 <div class="profile-avatar">
-                  <%= image_tag(cl_image_path(@user.photos.key), :alt => "avatar", class: "profile-avatar-image") %>
+                  <%= image_tag(cl_image_path(@user.photo.key), :alt => "avatar", class: "profile-avatar-image") %>
                 </div>
               <% else %>
                 <div class="profile-avatar">
@@ -51,8 +53,10 @@
               <h2> Your Appoitments </h2>
               <p><%= link_to "Add another appointment", robots_path %></p>
               <% @user.appointments.each do |app| %>
+
                 <li><%= app.robot.name %> booked for <%= app.sessions_duration %> at <%= app.sessions_datetime.strftime("%A %d %B") %></li>
               <% end %>
+
             </ul>
           <% end %>
 

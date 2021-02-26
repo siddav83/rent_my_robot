@@ -7,7 +7,7 @@
     <%= f.input :first_name, hint: "Isaac" %>
     <%= f.input :last_name, hint: "Asimov" %>
     <%= f.input :username, hint: "A-I-Man" %>
-    <%= f.input :photos, as: :file %>
+    <%= f.input :photo, as: :file %>
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
