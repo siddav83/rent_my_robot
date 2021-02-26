@@ -36,3 +36,57 @@ h2 {
   background-color: rgba(179, 188, 196, 0.5);
 }
 
+.card {
+  border: 1px solid blue;
+  width: 70%;
+  margin: -70px auto 16px;
+  border-radius: 5px;
+  background-color: rgba(179, 188, 196, 0.5);
+  min-height: 562px;
+
+}
+.flex-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.image-container {
+  padding: 8px;
+  width: 50%;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+
+}
+.robot-details {
+  width: 50%;
+  padding: 80px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.booking-form {
+  height: 100px;
+  width: 100%;
+}
+
+h4 {
+  font-weight: bold;
+  color: #3188C0;
+}
+
+h5 {
+  padding-bottom: 5px;
+}
+
+.btn-primary {
+  background-color: #3188C0 !important;
+  border-color: #3188C0 !important;
+}
+
+.form-control {
+  padding: 0;
+  font-size: 10px;
+}
