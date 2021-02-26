@@ -1,22 +1,9 @@
 <div class="holder">
   <div class="robo-background">
   </div>
-    <h2> Add your favorite Robot </h2>
-      <div class="container-new">
-        <div class="row justify-content-center">
-          <div class="col-6">
-           <%= simple_form_for(@robot) do |f| %>
-          <%= f.input :name, label_html: {class: "formlabel"} %>
-          <%= f.input :function, collection: @function, label_html: {class: "formlabel"} %>
-          <%= f.input :description, label_html: {class: "formlabel"} %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true }, label_html: {class: "formlabel"} %>
-          <%= f.submit "create a robot", class: 'btn btn-primary' %>
-          <% end %>
-         </div>
-       </div>
-     <form method='POST' action="/robots"></form>
-    </div>
- </div>
+   <div class="newcontainer">
+        <h2> Add your favorite Robot </h2>
+  <%= render "form", robot: @robot %>
 </div>
 </div>
 
