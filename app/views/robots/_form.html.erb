@@ -7,7 +7,7 @@
           <%= f.input :name, label_html: {class: "formlabel"} %>
           <%= f.input :function, collection: @function, label_html: {class: "formlabel"} %>
           <%= f.input :description, label_html: {class: "formlabel"} %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true }, label_html: {class: "formlabel"} %>
+          <%= f.input :photo, as: :file, label_html: {class: "formlabel"} %>
           </div>
           <%= f.submit "create a robot", class: 'btn btn-primary' %>
           <% end %>
