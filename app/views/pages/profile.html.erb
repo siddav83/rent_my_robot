@@ -5,16 +5,19 @@
     <div class="container">
       <div class="d-flex justify-content-between">
         <div class="col-4">
-          <div class="profile-image">
-            <div class="profile-avatar">
+          <div class="profile-image">            
               <% if @user.photos.present? %>
-                <%= cl_image_tag @user.photos.key, height: 150, width: 150, crop: :fill %>
+                <div class="profile-avatar">
+                  <%# <%= cl_image_tag @user.photos.key, height: 150, width: 150, crop: :fill %> %>
+                  <%= image_tag(cl_image_path(@user.photos.key), :alt => "avatar", class: "profile-avatar-image") %>
+                </div>
               <% else %>
-                <% img_source = "https://robohash.org/#{rand(1..99)}" %>
-                <%= image_tag(img_source, :alt => "robot alter-ego") %>
-                <%= link_to "Add and pic of you", edit_user_registration_path %>
-              <% end %>
-            </div>
+                <div class="profile-avatar">
+                  <% img_source = "https://robohash.org/#{rand(1..99)}" %>
+                  <%= image_tag(img_source, :alt => "robot alter-ego", class: "profile-avatar-image") %>
+                </div>
+                <%= link_to "Add a pic of you", edit_user_registration_path %>
+              <% end %>            
           </div>
           
           <% if @user.username.present? %>
