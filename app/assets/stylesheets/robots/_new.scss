@@ -1,90 +1,47 @@
-h2 {
-  font-size: 24px;
-  text-align: center;
-  font-weight: bold;
-  color: #3188C0;
-}
-
-.container-new {
-  background-color: #B3BCC4;
-  border-radius: 10px;
-  opacity: 0,2px;
-  text-align: center;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-
-}
-
-.btn-primary {
-  align: center;
-  background-color: #3188C0 !important;
-  border-color: #3188C0 !important;
-}
-
-.formlabel {
-  color: #3188C0;
-
-}
-.newcontainer {
-  opacity: 0,2px;
-  width: 70%;
-  padding: 8px;
-  align: center;
-  border-radius: 5px;
-  margin: -40px auto 2px;
-  background-color: rgba(179, 188, 196, 0.5);
-}
 
 .card-show {
-  margin: -70px auto 2px;
-  width: 70%;
   border-radius: 5px;
-  background-color: rgba(179, 188, 196, 0.5);
-  min-height: 562px;
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: 1px 1px 15px 3px rgba(0, 0, 0, 0.06);
+  width: 70%;
+  margin: auto;
 }
 
 .flex-container {
-  height: 100%;
-  width: 100%;
   display: flex;
+  padding: 15px;
+  margin-top: 10px;
 }
 
 .image-container {
-  padding: 8px;
   width: 50%;
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-
+ width: 100%
 }
+
+
 .robot-details {
   width: 50%;
-  padding: 80px 60px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-left: 15px;
 }
-
-.booking-form {
-  height: 100px;
-  width: 100%;
+.robot-details p {
+  font-weight: lighter;
 }
 
 .robo-title {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 32px;
-  color: #3188C0;
+  color: #1A518B;
+  font-family: arial;
+  text-shadow: 1px 1px rgba(0,0,0,0.06);
+  margin: 5px 5px 0px 0px;
 }
+
 
 .robo-subtitle {
   padding-bottom: 5px;
-}
-
-.btn-primary {
-  background-color: #3188C0 !important;
-  border-color: #3188C0 !important;
 }
 
 .form-control {
@@ -92,6 +49,3 @@ h2 {
   font-size: 10px;
 }
 
-.profile-name {
-  diplay: flex;
-}

@@ -25,18 +25,21 @@ h2 {
   font-family: arial;
   margin: 0px;
 }
-.card-details {
+.card-function {
   display: flex;
   justify-content: space-between;
   padding: 0px 10px 5px 10px;
 }
-.card-details p {
+.card-function p {
   font-weight: 300;
   font-family: arial;
   margin: 0;
 }
+.card-details {
+  padding-left: 10px;
+}
 
-img {
+.index-image img {
   height: 300px;
   width: 100%;
   object-fit: cover;
