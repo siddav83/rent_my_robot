@@ -9,7 +9,7 @@
     <div class="cards-index">
       <% @robots.each do |robot| %>
         <div class="card-index">
-          <div>
+          <div class="index-image">
             <% if robot.photo.attached? %>
               <%= image_tag(cl_image_path(robot.photo.key), alt: "robot photo") %>
             <% else %>
@@ -21,7 +21,7 @@
             <p>Rating: <%=robot.rating %></p>
           </div>
           <div class="card-details">
-            <p>Function: <%=robot.function %></p>
+            <p><%=robot.function %></p>
           </div>
           <div class="pay-btn">
             <%= link_to(robot_path(robot.id)) do %>

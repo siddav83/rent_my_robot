@@ -2,7 +2,7 @@
   <div class="robo-background">
   </div>
   <div class="card-show">
-    <div class="p-3 h-100">
+
       <div class="flex-container">
         <div class="image-container">
           <% if @robot.photo.attached? %>
@@ -16,11 +16,9 @@
           <h5 class="robo-subtitle"><%= @robot.function %></h5>
           <h5>Rating: <%= @robot.rating %></h5>
           <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. <%= @robot.description %></p>
-          <div class="booking-form">
-            <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
-          </div>
+          <%= render "appointments/form", locals: { robot: @robot, appointment: Appointment.new } %>
         </div>
       </div>
-    </div>
+
   </div>
 </div>
