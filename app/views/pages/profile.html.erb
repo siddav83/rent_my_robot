@@ -20,7 +20,7 @@
         <% if @user.first_name.present?  %>
           <div> <%= @user.first_name %></div>
         <% else %>
-          <h3><em>Roe</em></h3> &emsp;&emsp;&emsp;&emsp;
+          <h3><em>Roe</em></h3> &emsp;&emsp;&emsp;
         <% end %>
         <% if @user.last_name.present?  %>
           <div><%= @user.last_name %></div>
@@ -73,7 +73,7 @@
           <% if robot.photo.attached? %>
             <%= image_tag(cl_image_path(robot.photo.key), :alt => "avatar", class: "profile-avatar-image") %>
           <% else %>
-            <%= image_tag "https://scx2.b-cdn.net/gfx/news/hires/2019/3-robot.jpg", alt: "robot pic" %>
+            <%= image_tag "https://papers.co/wallpaper/papers.co-aq01-ai-artificial-intelligence-art-3d-illustration-6-wallpaper.jpg", alt: "robot pic" %>
           <% end %>
         </div>
           <div class="card-info">
