@@ -6,7 +6,8 @@
 }
 
 .card-info h3 {
-  font-family: copperplate;
+  font-family: arial;
+  font-weight: bolder;
   text-shadow: 1px 1px rgba(0,0,0,0.06);
   margin: 0px;
 }
@@ -39,7 +40,7 @@ h2 {
   padding-left: 10px;
 }
 
-.index-image img {
+.card-index img {
   height: 300px;
   width: 100%;
   object-fit: cover;

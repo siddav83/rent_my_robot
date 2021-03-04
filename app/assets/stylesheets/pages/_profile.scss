@@ -4,10 +4,19 @@
   border-radius: 50%;
   background-color: #f9f6f7;
 }
-
-.profile-image {
-  align: center;
-  padding: 30px 0 0 0;
+.fas.fa-user-circle {
+  font-size: 150px;
+  color: #1A518B;
+  border-radius: 50%;
+}
+.profile-image p {
+  text-align: center;
+}
+.profile-image a {
+  text-decoration: none;
+}
+.profile-image a:hover {
+  color: #f9f6f7;
 }
 
 .profile-avatar-image {
@@ -21,42 +30,66 @@
   margin: 10px;
 }
 
-.card-info p {
-  text-align: center;
-}
-.card-fucntion p {
-  text-align: center;
-}
-.pay-btn {
-  align-content: center;
-
-}
-
-.col-8 {
-  margin: 0 auto;
-}
-
-
 .profile-titles {
   text-align: center;
 }
 
-.Robotsbutton {
-  text-align: center;
+.add-robot a {
+  text-decoration: none;
+}
+
+.add-robot a:hover {
+  color: #f9f6f7
 }
 
 .update {
-  width: 80%;
-  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
 }
 
 .profile-name {
-  text-align: center;
-  diplay: flex;
-  margin: 0 auto;
+  display: flex;
+}
+.profile-name h3 {
+  font-size: 100px;
+  color: #f9f6f7;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+}
+.index-image img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+ol {
+  list-style-type: none;
+}
+
+.appointment-info li {
+  color: #f9f6f7;
+}
+
+.appointment-info {
+  padding: 20px;
+}
+
+.appointment-info {
+  padding: 20px;
+}
+.appointment-info a {
+  text-decoration: none;
+}
+.appointment-info a:hover {
+  color: #f9f6f7;
+
+}
+
+.card-profile {
   width: 60%;
 }
 
-.spacing {
-  margin: 0 auto;
+.card-holder.profile-holder {
+  background-color: rgba(0,0,0,0.9);
 }
