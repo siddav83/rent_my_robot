@@ -1,8 +1,14 @@
 // Specific CSS for your home-page
+.home-container {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .banner {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
 }
 
 .banner h1 {
@@ -15,16 +21,18 @@
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-family: sans-serif;
-  padding: 10px;
+  padding: 25px 10px 25px 0px;
+  margin: 0px;
 }
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  font-size: 20px;
+  padding: 12px 30px;
   border-radius: 4px;
   background: #1a508b;
   transition: background 0.3s ease;
@@ -38,6 +46,6 @@
 }
 
 .action {
-  padding: 150px;
+  padding-left: 200px;
 }
 
