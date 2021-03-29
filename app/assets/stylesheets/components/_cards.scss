@@ -2,3 +2,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.card-show {
+  min-width: 500px;
+}
+// Smallest device
+@media (min-width: 100px) and (max-width: 992px) {
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+

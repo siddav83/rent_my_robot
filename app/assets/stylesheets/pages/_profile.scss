@@ -1,3 +1,6 @@
+.profile-holder {
+  min-width: 660px;
+}
 .profile-avatar {
   height: 150px;
   width: 150px;
@@ -89,8 +92,16 @@ ol {
 
 .card-profile {
   width: 60%;
+  min-width: 400px;
+}
+.card-profile a {
+  text-decoration: none;
 }
 
 .card-holder.profile-holder {
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.5);
 }
+
+
+
+
